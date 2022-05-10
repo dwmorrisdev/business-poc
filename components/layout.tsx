@@ -17,7 +17,7 @@ export default function Layout({children}: LayoutProps): JSX.Element {
         <title>POC Project</title>
       </Head>
       <ExpandableDrawer>
-        <section className={styles.container}>
+        <section className={styles.container} >
           {children}
         </section>
       </ExpandableDrawer>

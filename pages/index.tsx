@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             </Box>
           </Grid>
         </Grid>
-        <Grid container spacing={4} mb-1>
+        <Grid container spacing={4} mb={1}>
           <Grid item sm={3}>
             <Typography variant="h5" align="center" mb={1}>
               Our Sharepoint
@@ -172,6 +172,7 @@ const Home: NextPage = () => {
           handleClose={handleCloseModal}
           headerText={MockModalData[modalContent].title}
           bodyText={MockModalData[modalContent].body}
+          icon={MockModalData[modalContent].icon}
         />
       </Box>
     </Layout>

@@ -3,19 +3,19 @@ import { NavList} from '../models/navbar-models';
 export const navConfig: NavList[] = [
   {
     name: 'Account',
-    icon: 'columns',
+    icon: 'light-columns',
     href: '/account',
     disabled: true
   },
   {
     name: 'Billing',
-    icon: 'debit-card',
+    icon: 'light-debit-card',
     href: '/billing',
     disabled: true,
   },
   {
     name: 'Our Location',
-    icon: 'dominos',
+    icon: 'light-dominos',
     routes: [
       {
         name: 'St Louis',
@@ -36,7 +36,7 @@ export const navConfig: NavList[] = [
   },
   {
     name: 'About Us',
-    icon: 'person',
+    icon: 'light-person',
     routes: [
       {
         name: 'Our Firm',
@@ -62,13 +62,13 @@ export const navConfig: NavList[] = [
   },
   {
     name: 'Management',
-    icon: 'graph',
+    icon: 'light-graph',
     href: '/management',
     disabled: true
   },
   {
     name: 'Clients',
-    icon: 'skyline',
+    icon: 'light-skyline',
     href: '/clients',
     routes: [
       {
@@ -95,12 +95,12 @@ export const navConfig: NavList[] = [
   },
   {
     name: 'Quality Assurance (404)',
-    icon: 'hammer',
+    icon: 'light-hammer',
     href: '/qa',
   },
   {
     name: 'Quote',
-    icon: 'dollar-paper',
+    icon: 'light-dollar-paper',
     href: '/another-page',
   }
 ];

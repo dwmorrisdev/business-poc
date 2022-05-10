@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import IconComponent from '../IconDict';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -21,9 +21,17 @@ interface ModalProps {
   handleClose: () => void;
   headerText: string;
   bodyText: string;
+  icon: string;
 }
 
-export default function ModalComponent({ showModal, handleClose, headerText, bodyText }: ModalProps) {
+export default function ModalComponent({
+  showModal,
+  handleClose,
+  headerText,
+  bodyText,
+  icon
+}: ModalProps) {
+  console.log('icon -> ', icon)
   return (
     <Modal
         open={showModal}
@@ -33,6 +41,7 @@ export default function ModalComponent({ showModal, handleClose, headerText, bod
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
+            <IconComponent icon={icon} />
             { headerText }
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>

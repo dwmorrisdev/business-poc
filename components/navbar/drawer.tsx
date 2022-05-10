@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Fragment, useState } from 'react';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
@@ -18,8 +18,8 @@ interface DrawerProps {
 }
 
 export default function ExpandableDrawer({children}: DrawerProps) {
-  const [open, setOpen] = React.useState(false);
-  const [openSubDrawer, setOpenSubDrawer] = React.useState('');
+  const [open, setOpen] = useState(false);
+  const [openSubDrawer, setOpenSubDrawer] = useState('');
   
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -54,13 +54,13 @@ export default function ExpandableDrawer({children}: DrawerProps) {
           </DrawerHeader>
           <Divider />
           <List>
-            {navConfig.map((navItem: NavList) => {
+            {navConfig.map((navItem: NavList, index: number) => {
               return (
-                <>
+                <Fragment key={index}>
                   {!navItem?.routes ? (
                     <DrawerItem 
                       name={navItem.name}
-                      href={navItem.href ?? '/'}
+                      href={navItem.href ?? ""}
                       icon={navItem.icon}
                       shouldPadIcon={!open}
                       shouldDisable={navItem?.disabled} 
@@ -77,7 +77,7 @@ export default function ExpandableDrawer({children}: DrawerProps) {
                       shouldPadIcon={!open}
                     />
                   )}
-                </>
+                </Fragment>
               );
             })}
           </List>
