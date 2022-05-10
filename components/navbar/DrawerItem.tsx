@@ -5,6 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
 import { iconDict } from './DrawerIcons';
+import Tooltip from '@mui/material/Tooltip';
 
 interface DrawerItemProps {
   name: string;
@@ -39,7 +40,13 @@ const DrawerItem = ({
             justifyContent: 'center',
           }}
         >
-          { iconDict[icon] }
+        {
+          shouldPadIcon ? (
+            <Tooltip title={name} placement="right" leaveDelay={200}>
+              { iconDict[icon] }
+            </Tooltip>
+          ) : (iconDict[icon])
+        }
         </ListItemIcon>
         <ListItemText primary={name} />
       </ListItemButton>

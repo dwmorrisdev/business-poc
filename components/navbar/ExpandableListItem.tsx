@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { ListItemIcon } from '@mui/material';
+import { ListItemIcon, Tooltip } from '@mui/material';
 import { NavLink } from '../../models/navbar-models';
 import { iconDict } from './DrawerIcons';
 
@@ -52,7 +52,13 @@ const ExpandableListItem = ({
                 justifyContent: 'center',
               }}
             >
-              {iconDict[icon]}
+            {
+              shouldPadIcon ? (
+                <Tooltip title={name} placement="right" leaveDelay={200}>
+                  { iconDict[icon] }
+                </Tooltip>
+              ) : (iconDict[icon])
+            }
             </ListItemIcon>
             <ListItemText primary={name} />
             {isSelected ? (
