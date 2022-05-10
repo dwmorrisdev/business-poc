@@ -2,16 +2,16 @@ import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
 import { iconDict } from '../IconDict';
-import Tooltip from '@mui/material/Tooltip';
+import { HtmlTooltip } from './drawerUtils';
+import Typography  from '@mui/material/Typography';
 
-interface DrawerItemProps {
+interface DrawerItemProps{
   name: string;
   href: string;
   icon: string;
-  shouldPadIcon?: boolean;
+  shouldPadIcon: boolean;
   shouldDisable?: boolean;
 }
 
@@ -42,9 +42,17 @@ const DrawerItem = ({
         >
         {
           shouldPadIcon ? (
-            <Tooltip title={name} placement="right" leaveDelay={200}>
+            <HtmlTooltip title={
+              <>
+              <Typography 
+                color="inherit" 
+                variant="subtitle1">
+                {name}
+              </Typography>
+              </>
+            } placement="right" leaveDelay={200}>
               {iconDict[icon]}
-            </Tooltip>
+            </HtmlTooltip>
           ) : (iconDict[icon])
         }
         </ListItemIcon>

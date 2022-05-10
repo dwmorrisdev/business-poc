@@ -11,11 +11,27 @@ const Firm: NextPage = () => {
           Our Firm
         </Typography>
         <Grid container spacing={2}>
-          <Grid item sm={3}>
+          <Grid item sm={6}>
             <Typography variant="h5" mb={1}>
               Some Header
             </Typography>
             <Typography paragraph>
+              This section takes up half of the column slots.
+              Preserve and cherish that pale blue dot tesseract 
+              rich in mystery corpus callosum consciousness of 
+              brilliant syntheses. With pretty stories for which
+              there is little good evidence venture vanquish the 
+              impossible the sky calls to us Tunguska event hundreds 
+              of thousands? Hearts of the stars bits of moving fluff 
+              extraordinary claims require extraordinary evidence 
+              Sea of Tranquility network of wormholes star stuff 
+              harvesting star light. The ash of stellar alchemy 
+              laws of physics dispassionate extraterrestrial 
+              observer laws of physics bits of moving fluff 
+              courage of our questions.
+            </Typography>
+            <Typography paragraph>
+              This section takes up half of the column slots.
               Preserve and cherish that pale blue dot tesseract 
               rich in mystery corpus callosum consciousness of 
               brilliant syntheses. With pretty stories for which
@@ -35,6 +51,7 @@ const Firm: NextPage = () => {
               Another Header
             </Typography>
             <Typography paragraph>
+              See a column subdivided by three here.
               Sea of Tranquility Flatland hearts of the stars a 
               billion trillion a still more glorious dawn awaits 
               from which we spring? The carbon in our apple pies 
@@ -63,11 +80,12 @@ const Firm: NextPage = () => {
               upon billions upon billions upon billions upon billions.
             </Typography>
           </Grid>
-          <Grid item sm={3}>
+          <Grid item sm={12}>
             <Typography variant="h5" mb={1}>
               Even More Header
             </Typography>
             <Typography paragraph>
+            See a full width column here.
             Prime number descended from astronomers light years cosmic 
             fugue colonies take root and flourish. The ash of stellar 
             alchemy a mote of dust suspended in a sunbeam Apollonius 

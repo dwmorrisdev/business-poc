@@ -2,6 +2,7 @@ import { styled, Theme, CSSObject, createTheme } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import { AppBarProps } from '../../models/navbar-models';
+import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 
 // mui theme for drawer and appbar
 export const theme = createTheme({
@@ -99,3 +100,15 @@ export const AppBar = styled(MuiAppBar, {
   }),
 }));
 
+// custom styles for tooltip (drawer)
+export const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.secondary.dark,
+    color: theme.palette.secondary.main,
+    maxWidth: 220,
+    fontSize: theme.typography.pxToRem(12),
+    border: '1px solid black',
+  },
+}));

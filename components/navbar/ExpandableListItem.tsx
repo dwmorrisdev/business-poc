@@ -6,9 +6,10 @@ import Link from 'next/link';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { ListItemIcon, Tooltip } from '@mui/material';
+import { ListItemIcon, Tooltip, Typography } from '@mui/material';
 import { NavLink } from '../../models/navbar-models';
 import { iconDict } from '../IconDict';
+import { HtmlTooltip } from './drawerUtils';
 
 interface ExpandableListItemProps {
   name: string;
@@ -54,9 +55,13 @@ const ExpandableListItem = ({
             >
             {
               shouldPadIcon ? (
-                <Tooltip title={name} placement="right" leaveDelay={200}>
+                <HtmlTooltip title={
+                  <>
+                    <Typography color="inherit" variant="subtitle1">{name}</Typography>
+                  </>
+                } placement="right" leaveDelay={200}>
                   {iconDict[icon]}
-                </Tooltip>
+                </HtmlTooltip>
               ) : (iconDict[icon])
             }
             </ListItemIcon>

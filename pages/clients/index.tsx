@@ -11,30 +11,30 @@ const Clients: NextPage = () => (
       <Typography variant="h5">List of Clients</Typography>
       <List>
         <ListItem disablePadding>
-          <Link href="/clients/[clientId]" as="/clients/Bayer" passHref>
+          <Link href="/clients/[clientId]" as="/clients/client-a" passHref>
             <ListItemButton>
-              <ListItemText primary="Bayer" />
+              <ListItemText primary="Client A" />
             </ListItemButton>
           </Link>
         </ListItem>
         <ListItem disablePadding>
-          <Link href="/clients/[clientId]" as="/clients/Centene" passHref>
+          <Link href="/clients/[clientId]" as="/clients/client-b" passHref>
             <ListItemButton>
-              <ListItemText primary="Centene" />
+              <ListItemText primary="Client B" />
             </ListItemButton>
           </Link>
         </ListItem>
         <ListItem disablePadding>
-          <Link href="/clients/[clientId]" as="/clients/Charter" passHref>
+          <Link href="/clients/[clientId]" as="/clients/client-c" passHref>
             <ListItemButton>
-              <ListItemText primary="Charter" />
+              <ListItemText primary="Client C" />
             </ListItemButton>
           </Link>
         </ListItem>
         <ListItem disablePadding>
-          <Link href="/clients/[clientId]" as="/clients/Ocelot" passHref>
+          <Link href="/clients/[clientId]" as="/clients/client-d" passHref>
             <ListItemButton>
-              <ListItemText primary="Ocelot" />
+              <ListItemText primary="Client D" />
             </ListItemButton>
           </Link>
         </ListItem>

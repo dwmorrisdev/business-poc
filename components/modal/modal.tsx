@@ -41,10 +41,12 @@ export default function ModalComponent({
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <IconComponent icon={icon} />
-            { headerText }
+            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
+              { headerText }
+              <IconComponent icon={icon} />
+            </Box>
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2, p: 1 }}>
             { bodyText }
           </Typography>
         </Box>
