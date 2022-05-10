@@ -72,23 +72,23 @@ export const navConfig: NavList[] = [
     href: '/clients',
     routes: [
       {
-        name: 'Bayer',
-        href: '/clients/bayer',
+        name: 'Client A',
+        href: '/clients/a',
         disabled: false,
       },
       {
-        name: 'Charter',
-        href: '/clients/charter',
+        name: 'Client B',
+        href: '/clients/b',
         disabled: false,
       },
       {
-        name: 'Centene',
-        href: '/clients/centene',
+        name: 'Client C',
+        href: '/clients/c',
         disabled: false,
       },
       {
-        name: 'Ocelot',
-        href: '/clients/ocelot',
+        name: 'Client D',
+        href: '/clients/d',
         disabled: false
       },
   ],
